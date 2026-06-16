@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Intelligence Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    display:flex;
+}
+
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#1f2937;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:12px 0;
+    cursor:pointer;
+}
+
+.main{
+    flex:1;
+    padding:20px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:#555;
+    margin-bottom:10px;
+}
+
+.metric{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.section{
+    margin-top:25px;
+}
+
+.panel{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.review{
+    border-bottom:1px solid #eee;
+    padding:12px 0;
+}
+
+.tag{
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin-top:6px;
+}
+
+.positive{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.negative{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+.issue{
+    padding:10px;
+    background:#fff7ed;
+    border-left:4px solid orange;
+    margin-bottom:10px;
+}
+
+.chart-placeholder{
+    height:250px;
+    border:2px dashed #ccc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#777;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>ReviewAI</h2>
+
+        <ul>
+            <li>📊 Dashboard</li>
+            <li>⭐ Reviews</li>
+            <li>😊 Sentiment</li>
+            <li>⚠ Issues</li>
+            <li>🏆 Competitors</li>
+            <li>🤖 AI Insights</li>
+            <li>⚙ Settings</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <h1>Review Intelligence Dashboard</h1>
+            <button>Generate AI Report</button>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Reviews</h3>
+                <div class="metric">12,480</div>
+            </div>
+
+            <div class="card">
+                <h3>Positive Reviews</h3>
+                <div class="metric">78%</div>
+            </div>
+
+            <div class="card">
+                <h3>Negative Reviews</h3>
+                <div class="metric">14%</div>
+            </div>
+
+            <div class="card">
+                <h3>Platforms Connected</h3>
+                <div class="metric">8</div>
+            </div>
+        </div>
+
+        <div class="section grid-2">
+
+            <div class="panel">
+                <h2>Sentiment Trend</h2>
+
+                <div class="chart-placeholder">
+                    Line Chart Placeholder
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Top Issues Detected</h2>
+
+                <div class="issue">
+                    Packaging Damage ↑ 32%
+                </div>
+
+                <div class="issue">
+                    Late Delivery ↑ 18%
+                </div>
+
+                <div class="issue">
+                    Battery Life Complaints ↑ 12%
+                </div>
+
+                <div class="issue">
+                    Missing Accessories ↑ 9%
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section grid-2">
+
+            <div class="panel">
+                <h2>Recent Reviews</h2>
+
+                <div class="review">
+                    "Excellent product quality and fast delivery."
+                    <br>
+                    <span class="tag positive">Positive</span>
+                </div>
+
+                <div class="review">
+                    "Packaging arrived damaged."
+                    <br>
+                    <span class="tag negative">Negative</span>
+                </div>
+
+                <div class="review">
+                    "Battery drains too quickly."
+                    <br>
+                    <span class="tag negative">Negative</span>
+                </div>
+
+                <div class="review">
+                    "Worth the price. Highly recommended."
+                    <br>
+                    <span class="tag positive">Positive</span>
+                </div>
+
+            </div>
+
+            <div class="panel">
+                <h2>AI Summary</h2>
+
+                <p>
+                Customers love product quality and design.
+                Main concerns are packaging damage and battery life.
+                Packaging complaints increased significantly this month.
+                Recommended action: improve shipping protection and investigate battery performance.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
